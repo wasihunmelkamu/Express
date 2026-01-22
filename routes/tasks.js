@@ -1,6 +1,6 @@
 import express from "express";
 import Joi from "joi";
-import Task from "../model/Task";
+import Task from "../model/Task.js";
 const router = express.Router();
 
 //validation schema
