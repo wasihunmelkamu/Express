@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import errorHandler from "./middleware/errorHandler.js";
 dotenv.config()
 
 import taskRoutes from './routes/tasks.js'
@@ -15,6 +16,7 @@ mongoose.connect(process.env.MONGODB_URI)
 // Import  and use  task routes
 
 app.use("/api/tasks", taskRoutes);
+app.use(errorHandler)
 //  start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
