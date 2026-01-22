@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-
+dotenv.config()
 
 import taskRoutes from './routes/tasks.js'
 // CREATE EXPRESS APP
