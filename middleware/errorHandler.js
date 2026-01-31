@@ -1,7 +1,7 @@
 
 
 function errorHandler(err, req, res, next) {
-  // Log the error (in production, use a proper logger like Winston)
+  //Log the error (in production, use a proper logger like Winston)
   console.error(err.stack);
 
   // Set default status code and message
